@@ -1,0 +1,68 @@
+Club
+ Collection<Person> 
+ addPersion(Persion p)
+
+ +- AtheleteClub (AC)
+  
+ +- CulturalClub (CC)
+
+Person > Club
+ ID
+ Name
+ Gender
+
+(Model)
+DataSet
+  Collection<Club>
+  Collection<Persion>
+
+
+Main has
+   a instance of DataSet
+
+funcs:
+ <start>
+  load persions and clubs
+  startParse -> 0)
+
+-------- (controller)
+0) parse commands
+
+1) register a persion to a Club
+   input ID
+   input Name
+     ->  create a instance of Persion
+   input a club to be belonged (id)
+    -> search club instance from collection
+   add a person to the club
+ 
+2) list persons in a club
+   input a club to be listed (id)
+   show a list 
+----------
+
+---------- (DAO/DTO)
+0）file input/output stream -> Object input/output stream
+
+load
+  file -> 
+   deserialize
+   Collection<Club>
+   Collection<Person> 
+   
+save 
+ serialize
+   Collection<Club>
+   Collection<Person> 
+----------
+
+ exit
+   save instance to file
+
+
+
+
+
+
+
+ 
