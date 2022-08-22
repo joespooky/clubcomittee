@@ -4,6 +4,7 @@ abstract class Club {
     protected int memberNumber = 0;
     protected int newMember;
     private Person owner;
+    private Collection<Persion> pl;ß
   
     Club(String name, int estYear) {
       this.name = name;
@@ -38,6 +39,13 @@ abstract class Club {
       System.out.println("メンバー数：" + this.memberNumber + "人");
     }
   
+    void list() {
+      for(Person p : pl) {
+        p.print();
+      }
+
+    }
+
     // public abstract void add(int newMember);
   }
   
